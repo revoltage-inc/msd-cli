@@ -27,7 +27,7 @@
     "picocolors": "^1.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.7.3",
+    "@types/node": "^18.7.4",
     "esbuild": "^0.15.2",
     "npm-check-updates": "^16.0.5",
     "ts-node": "^10.9.1",
