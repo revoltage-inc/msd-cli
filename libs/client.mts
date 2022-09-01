@@ -23,7 +23,10 @@ export const createDiscordClient = async (
   const client = new DiscordClient({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
   })
+
   await client.login(discordBotToken)
+  await new Promise<void>((resolve) => client.on("ready", () => resolve()))
+
   const guild = client.guilds.cache.get(discordServerId)
   if (!guild) {
     throw new Error("Guild is not found")
